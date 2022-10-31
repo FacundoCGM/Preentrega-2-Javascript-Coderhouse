@@ -75,14 +75,14 @@ do {
 
 do {
     preferenciaPrecio = Number(prompt("elija un máximo de precio, o 0 si no desea ninguno."))
-    if (preferenciaPrecio == NaN) {
-        console.log("Has ingresado una opción inválida")
+    if (isNaN(preferenciaPrecio)) {
+        alert("Has ingresado una opción inválida")
     } else if (preferenciaPrecio != 0){
         preferenciaUsuario.precio = preferenciaPrecio
     } else {
         preferenciaUsuario.precio = false
     }
-} while (preferenciaPrecio == NaN)
+} while (isNaN(preferenciaPrecio))
 
 
 let autosPosiblesTraccion = []
